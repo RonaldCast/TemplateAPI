@@ -1,0 +1,14 @@
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csprojAssemblyReference.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.AssemblyInfoInputs.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.AssemblyInfo.cs
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csproj.CoreCompileInputs.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.deps.json
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csproj.CopyComplete
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb

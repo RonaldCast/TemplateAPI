@@ -1,0 +1,12 @@
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.deps.json
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csprojAssemblyReference.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.AssemblyInfoInputs.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.AssemblyInfo.cs
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.CoreCompileInputs.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.CopyComplete
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb

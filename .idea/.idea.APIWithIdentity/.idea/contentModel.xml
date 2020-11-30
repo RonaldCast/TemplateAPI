@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="APIWithIdentity" t="IncludeRecursive">
+        <e p="APIWithIdentity.csproj" t="IncludeRecursive" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ArtistController.cs" t="Include" />
+          <e p="AuthController.cs" t="Include" />
+        </e>
+        <e p="DTOs" t="Include">
+          <e p="ArtistDTOs" t="Include">
+            <e p="ArtistDTO.cs" t="Include" />
+            <e p="SaveArtist.cs" t="Include" />
+          </e>
+          <e p="MusicDTOs" t="Include">
+            <e p="MusicDTO.cs" t="Include" />
+            <e p="SaveMusic.cs" t="Include" />
+          </e>
+          <e p="UserLogin.cs" t="Include" />
+          <e p="UserSignUp.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="AuthExtensions.cs" t="Include" />
+        </e>
+        <e p="Mapping" t="Include">
+          <e p="MappingProfile.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="APIWithIdentity.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Settings" t="Include">
+          <e p="JwtSettings.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Validators" t="Include">
+          <e p="ArtistValidator" t="Include">
+            <e p="SaveArtistValidator.cs" t="Include" />
+          </e>
+          <e p="MusicValidator" t="Include">
+            <e p="SaveMusicValidator.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="APIWithIdentity.DomainModel" t="IncludeRecursive">
+        <e p="APIWithIdentity.DomainModel" t="Include">
+          <e p="obj" t="Include">
+            <e p=".EntityFrameworkCore.targets" t="Include" />
+          </e>
+        </e>
+        <e p="APIWithIdentity.DomainModel.csproj" t="IncludeRecursive" />
+        <e p="AppDbContext.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20201129225250_InitialMigration.cs" t="Include" />
+          <e p="20201129225250_InitialMigration.Designer.cs" t="Include" />
+          <e p="AppDbContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Artist.cs" t="Include" />
+          <e p="Auth" t="Include">
+            <e p="Role.cs" t="Include" />
+            <e p="User.cs" t="Include" />
+          </e>
+          <e p="Contracts" t="Include">
+            <e p="Entity.cs" t="Include" />
+          </e>
+          <e p="Music.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="APIWithIdentity.DomainModel.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="APIWithIdentity.Persistence" t="IncludeRecursive">
+        <e p="APIWithIdentity.Persistence.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="APIWithIdentity.Persistence.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repository" t="Include">
+          <e p="ArtistRepository.cs" t="Include" />
+          <e p="Contracts" t="Include">
+            <e p="IArtistRepository.cs" t="Include" />
+            <e p="IMusicRepository.cs" t="Include" />
+            <e p="IRepository.cs" t="Include" />
+          </e>
+          <e p="MusicRepository.cs" t="Include" />
+          <e p="Repository.cs" t="Include" />
+        </e>
+        <e p="UnitOfWork" t="Include">
+          <e p="Contracts" t="Include">
+            <e p="IUnitOfWork.cs" t="Include" />
+          </e>
+          <e p="UnitOfWork.cs" t="Include" />
+        </e>
+      </e>
+      <e p="APIWithIdentity.Services" t="IncludeRecursive">
+        <e p="APIWithIdentity.Services.csproj" t="IncludeRecursive" />
+        <e p="ArtistS" t="Include">
+          <e p="ArtistServices.cs" t="Include" />
+          <e p="IArtistServices.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MusicS" t="Include">
+          <e p="IMusicServices.cs" t="Include" />
+          <e p="MusicServices.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="APIWithIdentity.Services.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="APIWithIdentity.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_APIWithIdentity.-1728730745.00" t="ExcludeRecursive" />
+  </component>
+</project>

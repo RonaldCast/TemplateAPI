@@ -1,0 +1,12 @@
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.deps.json
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csprojAssemblyReference.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.AssemblyInfoInputs.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.AssemblyInfo.cs
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csproj.CoreCompileInputs.cache
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.runtimeconfig.json
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.runtimeconfig.dev.json
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.genruntimeconfig.cache
