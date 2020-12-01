@@ -22,6 +22,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace APIWithIdentity
 {
@@ -61,9 +62,18 @@ namespace APIWithIdentity
             services.AddTransient<IMusicServices, MusicServices>();
             services.AddTransient<IArtistServices, ArtistServices>();
 
+            services.AddApiVersioning(op => op.ReportApiVersions = true);
+
+            services.AddVersionedApiExplorer(op =>
+            {
+                op.GroupNameFormat = "'v'VVV";
+                op.SubstituteApiVersionInUrl = true;
+            });
+
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "My Music", Version = "v1" });
+                options.SwaggerDoc("v2", new OpenApiInfo { Title = "My Music", Version = "v2" });
                 
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
@@ -119,6 +129,7 @@ namespace APIWithIdentity
             {
                 c.RoutePrefix = "";
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Music V1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "My Music API v2");
             });
         }
     }

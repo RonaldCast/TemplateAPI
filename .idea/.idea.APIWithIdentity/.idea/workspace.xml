@@ -64,16 +64,16 @@
         <option value="$PROJECT_DIR$/APIWithIdentity/DTOs/UserLogin.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/DTOs/UserSignUp.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Mapping/MappingProfile.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity/Startup.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/AppDbContext.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Validators/ArtistValidator/SaveArtistValidator.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Validators/MusicValidator/SaveMusicValidator.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistControllet.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Program.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.Persistence/UnitOfWork/UnitOfWork.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.Services/ArtistS/ArtistServices.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Startup.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" />
       </list>
     </option>
   </component>
@@ -136,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606655553437</updated>
-      <workItem from="1606655559802" duration="22769000" />
+      <workItem from="1606655559802" duration="28002000" />
     </task>
     <servers />
   </component>
@@ -149,22 +149,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="819" height="391" key="GridCell.Tab.0.bottom" timestamp="1606736592558">
+    <state width="488" height="295" key="GridCell.Tab.0.bottom" timestamp="1606786305415">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.0.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606736592558" />
-    <state width="819" height="391" key="GridCell.Tab.0.center" timestamp="1606736592557">
+    <state width="453" height="295" key="GridCell.Tab.0.bottom/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206477" />
+    <state width="488" height="295" key="GridCell.Tab.0.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606786305415" />
+    <state width="453" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819990" />
+    <state width="488" height="295" key="GridCell.Tab.0.center" timestamp="1606786305413">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.0.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606736592557" />
-    <state width="819" height="391" key="GridCell.Tab.0.left" timestamp="1606736592555">
+    <state width="453" height="295" key="GridCell.Tab.0.center/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206476" />
+    <state width="488" height="295" key="GridCell.Tab.0.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606786305413" />
+    <state width="453" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819988" />
+    <state width="488" height="295" key="GridCell.Tab.0.left" timestamp="1606786305412">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.0.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606736592555" />
-    <state width="819" height="391" key="GridCell.Tab.0.right" timestamp="1606736592558">
+    <state width="453" height="295" key="GridCell.Tab.0.left/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206475" />
+    <state width="488" height="295" key="GridCell.Tab.0.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606786305412" />
+    <state width="453" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819987" />
+    <state width="488" height="295" key="GridCell.Tab.0.right" timestamp="1606786305414">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.0.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606736592558" />
+    <state width="453" height="295" key="GridCell.Tab.0.right/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206477" />
+    <state width="488" height="295" key="GridCell.Tab.0.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606786305414" />
+    <state width="453" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819989" />
     <state width="819" height="391" key="GridCell.Tab.1.bottom" timestamp="1606736592561">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -242,63 +250,5 @@
     </state>
     <state x="636" y="222" key="RiderGenerateDialog/-140.-1057.1920.1057/0.0.1680.1050@0.0.1680.1050" timestamp="1606686391448" />
     <state x="636" y="222" key="RiderGenerateDialog/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606685295423" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs</url>
-          <line>38</line>
-          <properties documentPath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" initialLine="38">
-            <startOffsets>
-              <option value="1337" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1410" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs</url>
-          <line>37</line>
-          <properties documentPath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" initialLine="37">
-            <startOffsets>
-              <option value="1282" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1324" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs</url>
-          <line>36</line>
-          <properties documentPath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" initialLine="36">
-            <startOffsets>
-              <option value="1268" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1269" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs</url>
-          <line>40</line>
-          <properties documentPath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" initialLine="40">
-            <startOffsets>
-              <option value="1424" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1454" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APIWithIdentity.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [Authorize]
     public class ArtistController : Controller
@@ -25,6 +26,16 @@ namespace APIWithIdentity.Controllers
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ArtistDTO>>> GetAllArtists()
+        {
+            var artists = await _artistService.GetAllArtists();
+            var artistResources = _mapper.Map<IEnumerable<Artist>, IEnumerable<ArtistDTO>>(artists);
+            return Ok(artistResources);
+        }
+        
+        //[ApiVersion("1.0")]
+        [MapToApiVersion("2.0")]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ArtistDTO>>> GetAllArtiistsV2()
         {
             var artists = await _artistService.GetAllArtists();
             var artistResources = _mapper.Map<IEnumerable<Artist>, IEnumerable<ArtistDTO>>(artists);
@@ -51,6 +62,8 @@ namespace APIWithIdentity.Controllers
 
             return Ok(artistResource);
         }
+       
+       
 
     }
 }
