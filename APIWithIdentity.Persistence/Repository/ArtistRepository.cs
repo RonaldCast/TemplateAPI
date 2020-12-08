@@ -16,7 +16,7 @@ namespace APIWithIdentity.Persistence.Repository
 
         public async Task<IEnumerable<Artist>> GetAllWithMusicsAsync()
         {
-          return await Context.Artists.Include(a => a.Musics)
+            return await Context.Artists.Include(a => a.Musics)
               .ToListAsync();
         }
 

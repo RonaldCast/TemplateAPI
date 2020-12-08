@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using APIWithIdentity.DomainModel.Models;
 
-namespace APIWithIdentity.Services.ArtistS
+namespace APIWithIdentity.Services
 {
     public interface IArtistServices
     {

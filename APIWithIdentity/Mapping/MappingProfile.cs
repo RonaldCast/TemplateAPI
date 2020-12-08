@@ -1,6 +1,7 @@
 using APIWithIdentity.DomainModel.Models;
 using APIWithIdentity.DomainModel.Models.Auth;
 using APIWithIdentity.DTOs;
+using APIWithIdentity.DTOs.DTOsAuth;
 using APIWithIdentity.DTOs.MusicDTOs;
 using AutoMapper;
 
@@ -11,6 +12,7 @@ namespace APIWithIdentity.Mapping
           public MappingProfile()
           {
               // Resource to Domain
+              CreateMap<UserResponse, User>().ReverseMap();
               CreateMap<MusicDTO, Music>().ReverseMap();
               CreateMap<SaveMusic, Music>().ReverseMap();
               CreateMap<ArtistDTO, Artist>().ReverseMap();

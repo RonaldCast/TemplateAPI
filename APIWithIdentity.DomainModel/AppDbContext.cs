@@ -14,6 +14,10 @@ namespace APIWithIdentity.DomainModel
         
         public  DbSet<Artist> Artists { get; set; }
         public  DbSet<Music> Musics { get; set; }
+        
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        
+        
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 

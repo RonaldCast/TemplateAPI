@@ -1560,10 +1560,21 @@
           "bin/placeholder/APIWithIdentity.DomainModel.dll": {}
         }
       },
+      "APIWithIdentity.DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/APIWithIdentity.DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIWithIdentity.DTOs.dll": {}
+        }
+      },
       "APIWithIdentity.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "APIWithIdentity.DTOs": "1.0.0",
           "APIWithIdentity.DomainModel": "1.0.0"
         },
         "compile": {
@@ -5883,6 +5894,11 @@
       "path": "../APIWithIdentity.DomainModel/APIWithIdentity.DomainModel.csproj",
       "msbuildProject": "../APIWithIdentity.DomainModel/APIWithIdentity.DomainModel.csproj"
     },
+    "APIWithIdentity.DTOs/1.0.0": {
+      "type": "project",
+      "path": "../APIWithIdentity.DTOs/APIWithIdentity.DTOs.csproj",
+      "msbuildProject": "../APIWithIdentity.DTOs/APIWithIdentity.DTOs.csproj"
+    },
     "APIWithIdentity.Persistence/1.0.0": {
       "type": "project",
       "path": "../APIWithIdentity.Persistence/APIWithIdentity.Persistence.csproj",
@@ -5891,6 +5907,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "APIWithIdentity.DTOs >= 1.0.0",
       "APIWithIdentity.DomainModel >= 1.0.0",
       "APIWithIdentity.Persistence >= 1.0.0"
     ]
@@ -5925,6 +5942,9 @@
           "projectReferences": {
             "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/APIWithIdentity.DomainModel.csproj": {
               "projectPath": "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/APIWithIdentity.DomainModel.csproj"
+            },
+            "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DTOs/APIWithIdentity.DTOs.csproj": {
+              "projectPath": "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DTOs/APIWithIdentity.DTOs.csproj"
             },
             "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/APIWithIdentity.Persistence.csproj": {
               "projectPath": "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/APIWithIdentity.Persistence.csproj"

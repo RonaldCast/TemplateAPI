@@ -20,6 +20,9 @@
         "projectReferences": {
           "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/APIWithIdentity.DomainModel.csproj": {
             "projectPath": "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DomainModel/APIWithIdentity.DomainModel.csproj"
+          },
+          "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DTOs/APIWithIdentity.DTOs.csproj": {
+            "projectPath": "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.DTOs/APIWithIdentity.DTOs.csproj"
           }
         }
       }

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using APIWithIdentity.DomainModel.Models;
 using APIWithIdentity.DTOs;
-using APIWithIdentity.Services.ArtistS;
+using APIWithIdentity.Services;
 using APIWithIdentity.Validators.ArtistValidator;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;

@@ -10,6 +10,8 @@ namespace APIWithIdentity.Persistence
         // Repository Contract
         IArtistRepository Artists{ get;  }
         IMusicRepository Musics{ get;  }
+        
+        IRefreshTokenRepository RefreshTokens { get; }
 
         // Method for created 
         void CreateTransaction();

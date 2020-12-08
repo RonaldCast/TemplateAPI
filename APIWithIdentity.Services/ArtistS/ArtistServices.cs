@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using APIWithIdentity.DomainModel.Models;
 using APIWithIdentity.Persistence;
 
-namespace APIWithIdentity.Services.ArtistS
+namespace APIWithIdentity.Services
 {
     public class ArtistServices : IArtistServices
     {

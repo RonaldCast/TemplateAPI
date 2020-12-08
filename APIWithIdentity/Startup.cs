@@ -7,8 +7,7 @@ using APIWithIdentity.DomainModel.Models.Auth;
 using APIWithIdentity.Extensions;
 using APIWithIdentity.Persistence;
 using APIWithIdentity.Persistence.UnitOfWork;
-using APIWithIdentity.Services.ArtistS;
-using APIWithIdentity.Services.MusicS;
+using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -61,6 +60,7 @@ namespace APIWithIdentity
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IMusicServices, MusicServices>();
             services.AddTransient<IArtistServices, ArtistServices>();
+            services.AddTransient<IAuthServices, AuthServices>();
 
             services.AddApiVersioning(op => op.ReportApiVersions = true);
 

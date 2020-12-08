@@ -20,7 +20,6 @@
             <e p="MusicDTO.cs" t="Include" />
             <e p="SaveMusic.cs" t="Include" />
           </e>
-          <e p="UserLogin.cs" t="Include" />
           <e p="UserSignUp.cs" t="Include" />
         </e>
         <e p="Extensions" t="Include">
@@ -65,11 +64,14 @@
         <e p="Migrations" t="Include">
           <e p="20201129225250_InitialMigration.cs" t="Include" />
           <e p="20201129225250_InitialMigration.Designer.cs" t="Include" />
+          <e p="20201206162829_refreshToken.cs" t="Include" />
+          <e p="20201206162829_refreshToken.Designer.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="Artist.cs" t="Include" />
           <e p="Auth" t="Include">
+            <e p="RefreshToken.cs" t="Include" />
             <e p="Role.cs" t="Include" />
             <e p="User.cs" t="Include" />
           </e>
@@ -86,6 +88,24 @@
           </e>
         </e>
       </e>
+      <e p="APIWithIdentity.DTOs" t="IncludeRecursive">
+        <e p="APIWithIdentity.DTOs.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DTOsAuth" t="Include">
+          <e p="ResponseLogin.cs" t="Include" />
+          <e p="TokenRequest.cs" t="Include" />
+          <e p="UserLogin.cs" t="Include" />
+          <e p="UserResponse.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="APIWithIdentity.DTOs.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ResponseMessage.cs" t="Include" />
+      </e>
       <e p="APIWithIdentity.Persistence" t="IncludeRecursive">
         <e p="APIWithIdentity.Persistence.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
@@ -101,9 +121,11 @@
           <e p="Contracts" t="Include">
             <e p="IArtistRepository.cs" t="Include" />
             <e p="IMusicRepository.cs" t="Include" />
+            <e p="IRefreshTokenRepository.cs" t="Include" />
             <e p="IRepository.cs" t="Include" />
           </e>
           <e p="MusicRepository.cs" t="Include" />
+          <e p="RefreshTokenRepository.cs" t="Include" />
           <e p="Repository.cs" t="Include" />
         </e>
         <e p="UnitOfWork" t="Include">
@@ -118,6 +140,10 @@
         <e p="ArtistS" t="Include">
           <e p="ArtistServices.cs" t="Include" />
           <e p="IArtistServices.cs" t="Include" />
+        </e>
+        <e p="AuthS" t="Include">
+          <e p="AuthServices.cs" t="Include" />
+          <e p="IAuthServices.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="MusicS" t="Include">

@@ -1599,8 +1599,17 @@
           "APIWithIdentity.DomainModel.dll": {}
         }
       },
+      "APIWithIdentity.DTOs/1.0.0": {
+        "runtime": {
+          "APIWithIdentity.DTOs.dll": {}
+        },
+        "compile": {
+          "APIWithIdentity.DTOs.dll": {}
+        }
+      },
       "APIWithIdentity.Persistence/1.0.0": {
         "dependencies": {
+          "APIWithIdentity.DTOs": "1.0.0",
           "APIWithIdentity.DomainModel": "1.0.0"
         },
         "runtime": {
@@ -1612,6 +1621,7 @@
       },
       "APIWithIdentity.Services/1.0.0": {
         "dependencies": {
+          "APIWithIdentity.DTOs": "1.0.0",
           "APIWithIdentity.DomainModel": "1.0.0",
           "APIWithIdentity.Persistence": "1.0.0"
         },
@@ -4004,6 +4014,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "APIWithIdentity.DomainModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "APIWithIdentity.DTOs/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

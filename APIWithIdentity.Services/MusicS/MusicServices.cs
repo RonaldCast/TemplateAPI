@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using APIWithIdentity.DomainModel.Models;
 using APIWithIdentity.Persistence;
 
-namespace APIWithIdentity.Services.MusicS
+namespace APIWithIdentity.Services
 {
     public class MusicServices : IMusicServices
     {

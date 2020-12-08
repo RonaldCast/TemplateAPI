@@ -10,3 +10,5 @@
 /Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.CopyComplete
 /Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll
 /Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb

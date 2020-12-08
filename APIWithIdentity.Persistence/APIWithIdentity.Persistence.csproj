@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\APIWithIdentity.DomainModel\APIWithIdentity.DomainModel.csproj" />
+      <ProjectReference Include="..\APIWithIdentity.DTOs\APIWithIdentity.DTOs.csproj" />
     </ItemGroup>
 
 </Project>

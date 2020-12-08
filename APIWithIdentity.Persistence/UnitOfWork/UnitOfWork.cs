@@ -14,6 +14,7 @@ namespace APIWithIdentity.Persistence.UnitOfWork
 
         private ArtistRepository _artistRepository;
         private MusicRepository _musicRepository;
+        private RefreshTokenRepository _refreshTokens;
 
         public UnitOfWork(AppDbContext dbContext)
         {
@@ -30,6 +31,7 @@ namespace APIWithIdentity.Persistence.UnitOfWork
 
         public IMusicRepository Musics =>  _musicRepository ??= new MusicRepository(_dbContext);
 
+        public IRefreshTokenRepository RefreshTokens => _refreshTokens ??= new RefreshTokenRepository(_dbContext) ;
         public void CreateTransaction()
         {
             _dbTransaction = _dbContext.Database.BeginTransaction();

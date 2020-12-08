@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using APIWithIdentity.DomainModel.Models.Auth;
 using APIWithIdentity.DTOs;
+using APIWithIdentity.DTOs.DTOsAuth;
+using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -25,17 +30,20 @@ namespace APIWithIdentity.Controllers
         private readonly IMapper _mapper;
         private readonly RoleManager<Role> _roleManager;
         private readonly JwtSettings _jwtSettings;
+        private readonly IAuthServices _authServices;
 
         public AuthController(
             IMapper mapper,
             UserManager<User> userManager,
             RoleManager<Role> roleManager,
-            IOptionsSnapshot<JwtSettings> jwtSettings)
+            IOptionsSnapshot<JwtSettings> jwtSettings,
+            IAuthServices authServices)
         {
             _mapper = mapper;
             _userManager = userManager;
             _roleManager = roleManager;
             _jwtSettings = jwtSettings.Value;
+            _authServices = authServices;
         }
         
         [HttpPost("SignUp")]
@@ -54,8 +62,10 @@ namespace APIWithIdentity.Controllers
         }
         
         [HttpPost("SignIn")]
-        public async Task<IActionResult> SignIn(UserLogin userLoginResource)
+        public async Task<ActionResult<ResponseMessage<ResponseLogin>>> SignIn(UserLogin userLoginResource)
         {
+            ResponseMessage<ResponseLogin> resp = new ResponseMessage<ResponseLogin>();
+            
             var user = _userManager.Users.SingleOrDefault(u => u.UserName == userLoginResource.Email);
             if (user is null)
             {
@@ -64,13 +74,32 @@ namespace APIWithIdentity.Controllers
 
             var userSigninResult = await _userManager.CheckPasswordAsync(user, userLoginResource.Password);
 
-            if (userSigninResult)
+            if (!userSigninResult)
             {
-                var roles = await _userManager.GetRolesAsync(user);
-                return Ok(GenerateJwt(user, roles));
+                resp.Message = "Email o contraseña son incorrectos";
+                
+                return BadRequest(resp);
             }
 
-            return BadRequest("Email or password incorrect.");
+          
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var token = GenerateJwt(user, roles);
+            var refreshToken = GenerateRefreshToken(IpAddress());
+
+            await _authServices.SaveRefreshTokenAsync(user, refreshToken);
+
+            var login = new ResponseLogin()
+            {
+                Token = token,
+                RefreshToken = refreshToken.Token,
+                User = _mapper.Map<User, UserResponse>(user)
+
+            };
+            resp.Message = "Ha iniciado sesion correctamente";
+            resp.Response = login;
+            
+            return Ok(resp);
         }
         
         [HttpPost("Roles")]
@@ -95,6 +124,61 @@ namespace APIWithIdentity.Controllers
 
             return Problem(roleResult.Errors.First().Description, null, 500);
         }
+
+        
+        [HttpPost("refresh-token")]
+        public async Task<ActionResult<ResponseMessage<ResponseLogin>>>
+           RefreshToken([FromBody] TokenRequest refreshToken)
+       {
+           var user = await _authServices
+               .GetUserByRefreshTokenAsync(refreshToken.Token);
+
+           if (user == null)
+               return Unauthorized();
+
+           var ip = IpAddress();
+           var newRefreshToken = GenerateRefreshToken(ip);
+
+           var updateRefresh = await _authServices
+               .UpdateRefreshTokenAsync(refreshToken.Token, newRefreshToken, ip);
+
+           var roles = await _userManager.GetRolesAsync(updateRefresh);
+           var resp = new ResponseMessage<ResponseLogin>()
+           {
+                Response = new ResponseLogin()
+                {
+                    Token = GenerateJwt(updateRefresh, roles),
+                    RefreshToken =  newRefreshToken.Token
+                }
+           };
+
+           return Ok(resp);
+
+       }
+        
+        [HttpPost("revoke-token")]
+        public async Task<ActionResult<ResponseMessage<bool>>> RevokeToken([FromBody] TokenRequest model)
+        {
+            var resp = await _authServices.RevokeTokenAsync(model.Token, IpAddress());
+
+            if (!resp.Response)
+                return BadRequest(resp);
+
+            return Ok(resp);
+        }
+
+        private void SetTokenCookie(string token)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+            Response.Cookies.Append("refreshToken", token, cookieOptions);
+        }
+
+        [Authorize]
+        [HttpPost("revoke-token")]
         
         private string GenerateJwt(User user, IList<string> roles)
         {
@@ -125,9 +209,31 @@ namespace APIWithIdentity.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
         
+        private string IpAddress()
+        {
+            if (Request.Headers.ContainsKey("X-Forwarded-For"))
+                return Request.Headers["X-Forwarded-For"];
+            else
+                return HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+        }
+        
+        private RefreshToken GenerateRefreshToken(string ipAddress)
+        {
+            using(var rngCryptoServiceProvider = new RNGCryptoServiceProvider())
+            {
+                var randomBytes = new byte[64];
+                rngCryptoServiceProvider.GetBytes(randomBytes);
+                return new RefreshToken
+                {
+                    Token = Convert.ToBase64String(randomBytes),
+                    Expires = DateTime.UtcNow.AddDays(7),
+                    Created = DateTime.UtcNow,
+                    CreatedByIp = ipAddress
+                };
+            }
+        }
         
         
-
     }
 
 
