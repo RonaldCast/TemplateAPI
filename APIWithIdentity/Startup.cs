@@ -34,7 +34,6 @@ namespace APIWithIdentity
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<JwtSettings>(Configuration.GetSection("Jwt"));
@@ -48,11 +47,12 @@ namespace APIWithIdentity
             
             services.AddIdentity<User, Role>(options =>
                 {
-                    options.Password.RequiredLength = 8;
-                    options.Password.RequireNonAlphanumeric = true;
-                    options.Password.RequireUppercase = true;
+                    options.Password.RequiredLength = 5;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireLowercase = false;
                     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1d);
-                    options.Lockout.MaxFailedAccessAttempts = 5;
+                    options.Lockout.MaxFailedAccessAttempts = 20;
                 })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();

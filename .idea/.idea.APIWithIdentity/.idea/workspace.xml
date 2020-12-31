@@ -23,95 +23,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daf83113-15a6-4e70-82b2-7c6161631dd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/ResponseLogin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/TokenRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/UserResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/ResponseMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Auth/RefreshToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/Contracts/IRefreshTokenRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/RefreshTokenRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.Services/AuthS/AuthServices.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIWithIdentity.Services/AuthS/IAuthServices.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/AssignRole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/CreateRole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APIWithIdentity/Validators/AuthValidator/AssignRoleValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APIWithIdentity/Validators/AuthValidator/RoleValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Auth/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Auth/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/APIWithIdentity.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/APIWithIdentity.Persistence.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/ArtistRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/ArtistRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/UnitOfWork/Contracts/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/UnitOfWork/Contracts/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/UnitOfWork/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/APIWithIdentity.Persistence.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/APIWithIdentity.Persistence.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Persistence/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/APIWithIdentity.Services.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/APIWithIdentity.Services.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/ArtistS/ArtistServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/ArtistS/ArtistServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/ArtistS/IArtistServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/ArtistS/IArtistServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/MusicS/IMusicServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/MusicS/IMusicServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/MusicS/MusicServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/MusicS/MusicServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/APIWithIdentity.Services.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/APIWithIdentity.Services.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.Services/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.Services/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.sln" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/DTOs/UserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/UserLogin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/Mapping/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/Mapping/MappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/DTOs/ArtistDTOs/ArtistDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsArtist/ArtistDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/DTOs/ArtistDTOs/SaveArtist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsArtist/SaveArtist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/DTOs/MusicDTOs/MusicDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsMusic/MusicDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/DTOs/MusicDTOs/SaveMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsMusic/SaveMusic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/DTOs/UserSignUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/UserSignUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/APIWithIdentity.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/APIWithIdentity.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.dll" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/Debug/netcoreapp3.1/APIWithIdentity.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,12 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/AppContext.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Contracts/Entity.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Artist.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Auth/Role.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/Contracts/IMusicRepository.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/Repository.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Music.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/MusicRepository.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Settings/JwtSettings.cs" />
@@ -183,7 +137,6 @@
         <option value="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/UserResponse.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Mapping/MappingProfile.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/ResponseLogin.cs" />
-        <option value="$PROJECT_DIR$/APIWithIdentity/Startup.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/appsettings.json" />
         <option value="$PROJECT_DIR$/APIWithIdentity.DomainModel/Models/Auth/RefreshToken.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.DTOs/DTOsAuth/RevokeTokenRequest.cs" />
@@ -191,6 +144,13 @@
         <option value="$PROJECT_DIR$/APIWithIdentity.Persistence/Repository/RefreshTokenRepository.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.Services/AuthS/AuthServices.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity.Services/AuthS/IAuthServices.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Startup.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/DTOs/DTOAuth/CreateRole.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/DTOs/DTOAuth/AssignRole.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Validators/RoleValidator.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Validators/AuthValidator/RoleValidator.cs" />
+        <option value="$PROJECT_DIR$/APIWithIdentity/Validators/AuthValidator/AssignRoleValidator.cs" />
         <option value="$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs" />
       </list>
     </option>
@@ -261,7 +221,9 @@
       <updated>1606655553437</updated>
       <workItem from="1606655559802" duration="28799000" />
       <workItem from="1606872514361" duration="1618000" />
-      <workItem from="1607260402030" duration="15002000" />
+      <workItem from="1607260402030" duration="15538000" />
+      <workItem from="1609040910594" duration="520000" />
+      <workItem from="1609372435134" duration="4312000" />
     </task>
     <servers />
   </component>
@@ -294,102 +256,102 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="474" height="464" key="DebuggerActiveHint/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393139028" />
-    <state width="819" height="391" key="GridCell.Tab.0.bottom" timestamp="1607393850001">
+    <state width="819" height="192" key="GridCell.Tab.0.bottom" timestamp="1609376015616">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="453" height="295" key="GridCell.Tab.0.bottom/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206477" />
-    <state width="819" height="391" key="GridCell.Tab.0.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393850001" />
+    <state width="819" height="192" key="GridCell.Tab.0.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015616" />
     <state width="453" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819990" />
-    <state width="819" height="391" key="GridCell.Tab.0.center" timestamp="1607393850000">
+    <state width="819" height="192" key="GridCell.Tab.0.center" timestamp="1609376015614">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="453" height="295" key="GridCell.Tab.0.center/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206476" />
-    <state width="819" height="391" key="GridCell.Tab.0.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393850000" />
+    <state width="819" height="192" key="GridCell.Tab.0.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015614" />
     <state width="453" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819988" />
-    <state width="819" height="391" key="GridCell.Tab.0.left" timestamp="1607393849999">
+    <state width="819" height="192" key="GridCell.Tab.0.left" timestamp="1609376015612">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="453" height="295" key="GridCell.Tab.0.left/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206475" />
-    <state width="819" height="391" key="GridCell.Tab.0.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849999" />
+    <state width="819" height="192" key="GridCell.Tab.0.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015612" />
     <state width="453" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819987" />
-    <state width="819" height="391" key="GridCell.Tab.0.right" timestamp="1607393850001">
+    <state width="819" height="192" key="GridCell.Tab.0.right" timestamp="1609376015615">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="453" height="295" key="GridCell.Tab.0.right/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1606786206477" />
-    <state width="819" height="391" key="GridCell.Tab.0.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393850001" />
+    <state width="819" height="192" key="GridCell.Tab.0.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015615" />
     <state width="453" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1606777819989" />
-    <state width="819" height="391" key="GridCell.Tab.1.bottom" timestamp="1607393918620">
-      <screen x="0" y="23" width="1680" height="957" />
+    <state width="819" height="192" key="GridCell.Tab.1.bottom" timestamp="1609376015481">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="391" key="GridCell.Tab.1.bottom/-140.-1057.1920.1057/0.0.1680.980@0.0.1680.980" timestamp="1607393515737" />
-    <state width="819" height="391" key="GridCell.Tab.1.bottom/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1607393918620" />
-    <state width="819" height="391" key="GridCell.Tab.1.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849882" />
-    <state width="819" height="391" key="GridCell.Tab.1.center" timestamp="1607393918617">
-      <screen x="0" y="23" width="1680" height="957" />
+    <state width="819" height="192" key="GridCell.Tab.1.bottom/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1609374643776" />
+    <state width="819" height="192" key="GridCell.Tab.1.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015481" />
+    <state width="819" height="192" key="GridCell.Tab.1.center" timestamp="1609376015480">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="391" key="GridCell.Tab.1.center/-140.-1057.1920.1057/0.0.1680.980@0.0.1680.980" timestamp="1607393515735" />
-    <state width="819" height="391" key="GridCell.Tab.1.center/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1607393918617" />
-    <state width="819" height="391" key="GridCell.Tab.1.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849880" />
-    <state width="819" height="391" key="GridCell.Tab.1.left" timestamp="1607393918615">
-      <screen x="0" y="23" width="1680" height="957" />
+    <state width="819" height="192" key="GridCell.Tab.1.center/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1609374643774" />
+    <state width="819" height="192" key="GridCell.Tab.1.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015480" />
+    <state width="819" height="192" key="GridCell.Tab.1.left" timestamp="1609376015480">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="391" key="GridCell.Tab.1.left/-140.-1057.1920.1057/0.0.1680.980@0.0.1680.980" timestamp="1607393515735" />
-    <state width="819" height="391" key="GridCell.Tab.1.left/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1607393918615" />
-    <state width="819" height="391" key="GridCell.Tab.1.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849880" />
-    <state width="819" height="391" key="GridCell.Tab.1.right" timestamp="1607393918619">
-      <screen x="0" y="23" width="1680" height="957" />
+    <state width="819" height="192" key="GridCell.Tab.1.left/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1609374643774" />
+    <state width="819" height="192" key="GridCell.Tab.1.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015480" />
+    <state width="819" height="192" key="GridCell.Tab.1.right" timestamp="1609376015481">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="391" key="GridCell.Tab.1.right/-140.-1057.1920.1057/0.0.1680.980@0.0.1680.980" timestamp="1607393515736" />
-    <state width="819" height="391" key="GridCell.Tab.1.right/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1607393918619" />
-    <state width="819" height="391" key="GridCell.Tab.1.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849881" />
-    <state width="819" height="391" key="GridCell.Tab.2.bottom" timestamp="1607393849884">
+    <state width="819" height="192" key="GridCell.Tab.1.right/-140.-1057.1920.1057/0.23.1680.957@0.23.1680.957" timestamp="1609374643775" />
+    <state width="819" height="192" key="GridCell.Tab.1.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015481" />
+    <state width="819" height="192" key="GridCell.Tab.2.bottom" timestamp="1609376015484">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.2.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849884" />
-    <state width="819" height="391" key="GridCell.Tab.2.center" timestamp="1607393849883">
+    <state width="819" height="192" key="GridCell.Tab.2.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015484" />
+    <state width="819" height="192" key="GridCell.Tab.2.center" timestamp="1609376015483">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.2.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849883" />
-    <state width="819" height="391" key="GridCell.Tab.2.left" timestamp="1607393849882">
+    <state width="819" height="192" key="GridCell.Tab.2.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015483" />
+    <state width="819" height="192" key="GridCell.Tab.2.left" timestamp="1609376015482">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.2.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849882" />
-    <state width="819" height="391" key="GridCell.Tab.2.right" timestamp="1607393849883">
+    <state width="819" height="192" key="GridCell.Tab.2.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015482" />
+    <state width="819" height="192" key="GridCell.Tab.2.right" timestamp="1609376015483">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.2.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849883" />
-    <state width="819" height="391" key="GridCell.Tab.3.bottom" timestamp="1607393849885">
+    <state width="819" height="192" key="GridCell.Tab.2.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015483" />
+    <state width="819" height="192" key="GridCell.Tab.3.bottom" timestamp="1609376015486">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.3.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849885" />
-    <state width="819" height="391" key="GridCell.Tab.3.center" timestamp="1607393849885">
+    <state width="819" height="192" key="GridCell.Tab.3.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015486" />
+    <state width="819" height="192" key="GridCell.Tab.3.center" timestamp="1609376015485">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.3.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849885" />
-    <state width="819" height="391" key="GridCell.Tab.3.left" timestamp="1607393849884">
+    <state width="819" height="192" key="GridCell.Tab.3.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015485" />
+    <state width="819" height="192" key="GridCell.Tab.3.left" timestamp="1609376015484">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.3.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849884" />
-    <state width="819" height="391" key="GridCell.Tab.3.right" timestamp="1607393849885">
+    <state width="819" height="192" key="GridCell.Tab.3.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015484" />
+    <state width="819" height="192" key="GridCell.Tab.3.right" timestamp="1609376015486">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.3.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849885" />
-    <state width="819" height="391" key="GridCell.Tab.4.bottom" timestamp="1607393849887">
+    <state width="819" height="192" key="GridCell.Tab.3.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015486" />
+    <state width="819" height="192" key="GridCell.Tab.4.bottom" timestamp="1609376015488">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.4.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849887" />
-    <state width="819" height="391" key="GridCell.Tab.4.center" timestamp="1607393849886">
+    <state width="819" height="192" key="GridCell.Tab.4.bottom/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015488" />
+    <state width="819" height="192" key="GridCell.Tab.4.center" timestamp="1609376015487">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.4.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849886" />
-    <state width="819" height="391" key="GridCell.Tab.4.left" timestamp="1607393849886">
+    <state width="819" height="192" key="GridCell.Tab.4.center/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015487" />
+    <state width="819" height="192" key="GridCell.Tab.4.left" timestamp="1609376015487">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.4.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849886" />
-    <state width="819" height="391" key="GridCell.Tab.4.right" timestamp="1607393849887">
+    <state width="819" height="192" key="GridCell.Tab.4.left/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015487" />
+    <state width="819" height="192" key="GridCell.Tab.4.right" timestamp="1609376015488">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="391" key="GridCell.Tab.4.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1607393849887" />
+    <state width="819" height="192" key="GridCell.Tab.4.right/-140.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1609376015488" />
     <state x="440" y="264" key="Rider.ProjectTemplateDialog.Size" timestamp="1606874513160">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -428,6 +390,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/APIWithIdentity/Controllers/ArtistController.cs" initialLine="47">
+            <startOffsets>
+              <option value="1704" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1705" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs</url>
+          <line>118</line>
+          <properties documentPath="$PROJECT_DIR$/APIWithIdentity/Controllers/AuthController.cs" initialLine="107">
+            <startOffsets>
+              <option value="3991" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4058" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

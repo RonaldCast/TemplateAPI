@@ -11,7 +11,9 @@ using APIWithIdentity.DTOs;
 using APIWithIdentity.DTOs.DTOsAuth;
 using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
+using APIWithIdentity.Validators;
 using AutoMapper;
+using FluentValidation.TestHelper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -46,6 +48,7 @@ namespace APIWithIdentity.Controllers
             _authServices = authServices;
         }
         
+        [Authorize(Roles = "Admin")]
         [HttpPost("SignUp")]
         public async Task<IActionResult> SignUp(UserSignUp userSignUp)
         {
@@ -83,7 +86,6 @@ namespace APIWithIdentity.Controllers
 
           
             var roles = await _userManager.GetRolesAsync(user);
-
             var token = GenerateJwt(user, roles);
             var refreshToken = GenerateRefreshToken(IpAddress());
 
@@ -102,27 +104,79 @@ namespace APIWithIdentity.Controllers
             return Ok(resp);
         }
         
-        [HttpPost("Roles")]
-        public async Task<IActionResult> CreateRole(string roleName)
+        [Authorize(Roles = "Admin")]
+        [HttpPost("role")]
+        public async Task<IActionResult> CreateRole([FromBody]  CreateRole model)
         {
-            if(string.IsNullOrWhiteSpace(roleName))
-            {
-                return BadRequest("Role name should be provided.");
-            }
+            var validator = new RoleValidator();
+            var validResult = await validator.ValidateAsync(model);
 
+            if (!validResult.IsValid)
+            {
+                return BadRequest(validResult.Errors);
+            }
+            
+            var roleExist = await _roleManager.RoleExistsAsync(model.RoleName);
+
+            if (roleExist) return BadRequest();
             var newRole = new Role
             {
-                Name = roleName
+                Name = model.RoleName
             };
 
-            var roleResult = await _roleManager.CreateAsync(newRole);
+            var result = await _roleManager.CreateAsync(newRole);
 
-            if (roleResult.Succeeded)
+            if (result.Succeeded)
+            {
+                return Ok(new {message = "se a creado correctamente"});
+            }
+            return BadRequest();
+        }
+        
+        [Authorize(Roles = "Admin")]
+        [HttpPost("roleUser")]
+        public async Task<ActionResult> AssignRoleToUser([FromBody] AssignRole model)
+        {
+            var validator = new AssignRoleValidator();
+            var validResult = await validator.ValidateAsync(model);
+
+            if (!validResult.IsValid)
+                return BadRequest(validResult.Errors);
+            
+            var user = await _userManager.FindByIdAsync(model.UserId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+            
+            var currentRoles = await _userManager.GetRolesAsync(user);
+
+            var rolesNotExist = model.Roles.Except(_roleManager.Roles.Select(x => x.Name)).ToArray();
+            
+            if(rolesNotExist.Any())
+            {
+                return this.BadRequest();
+            }
+            
+            var removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles.ToArray());
+
+
+            if (!removeResult.Succeeded)
+            {
+                ModelState.AddModelError("", "Failed to remove user roles");
+                return BadRequest();
+            }
+            
+            var result = await _userManager.AddToRolesAsync(user, model.Roles);
+
+            if (result.Succeeded)
             {
                 return Ok();
             }
-
-            return Problem(roleResult.Errors.First().Description, null, 500);
+            
+            return BadRequest();
+           
         }
 
         
@@ -179,10 +233,8 @@ namespace APIWithIdentity.Controllers
 
         [Authorize]
         [HttpPost("revoke-token")]
-        
         private string GenerateJwt(User user, IList<string> roles)
         {
-
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
@@ -190,6 +242,12 @@ namespace APIWithIdentity.Controllers
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
+
+            if (roles.Count > 0)
+            {
+                claims.AddRange(roles
+                    .Select(rol => new Claim(ClaimTypes.Role, rol)));
+            }
 
             var roleClaims = roles.Select(r => new Claim(ClaimTypes.Role, r));
             claims.AddRange(roleClaims);
@@ -226,7 +284,7 @@ namespace APIWithIdentity.Controllers
                 return new RefreshToken
                 {
                     Token = Convert.ToBase64String(randomBytes),
-                    Expires = DateTime.UtcNow.AddDays(7),
+                    Expires = DateTime.UtcNow.AddDays(365),
                     Created = DateTime.UtcNow,
                     CreatedByIp = ipAddress
                 };

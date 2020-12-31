@@ -11,17 +11,6 @@
           <e p="ArtistController.cs" t="Include" />
           <e p="AuthController.cs" t="Include" />
         </e>
-        <e p="DTOs" t="Include">
-          <e p="ArtistDTOs" t="Include">
-            <e p="ArtistDTO.cs" t="Include" />
-            <e p="SaveArtist.cs" t="Include" />
-          </e>
-          <e p="MusicDTOs" t="Include">
-            <e p="MusicDTO.cs" t="Include" />
-            <e p="SaveMusic.cs" t="Include" />
-          </e>
-          <e p="UserSignUp.cs" t="Include" />
-        </e>
         <e p="Extensions" t="Include">
           <e p="AuthExtensions.cs" t="Include" />
         </e>
@@ -46,6 +35,10 @@
         <e p="Validators" t="Include">
           <e p="ArtistValidator" t="Include">
             <e p="SaveArtistValidator.cs" t="Include" />
+          </e>
+          <e p="AuthValidator" t="Include">
+            <e p="AssignRoleValidator.cs" t="Include" />
+            <e p="RoleValidator.cs" t="Include" />
           </e>
           <e p="MusicValidator" t="Include">
             <e p="SaveMusicValidator.cs" t="Include" />
@@ -91,11 +84,22 @@
       <e p="APIWithIdentity.DTOs" t="IncludeRecursive">
         <e p="APIWithIdentity.DTOs.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DTOsArtist" t="Include">
+          <e p="ArtistDTO.cs" t="Include" />
+          <e p="SaveArtist.cs" t="Include" />
+        </e>
         <e p="DTOsAuth" t="Include">
+          <e p="AssignRole.cs" t="Include" />
+          <e p="CreateRole.cs" t="Include" />
           <e p="ResponseLogin.cs" t="Include" />
           <e p="TokenRequest.cs" t="Include" />
           <e p="UserLogin.cs" t="Include" />
           <e p="UserResponse.cs" t="Include" />
+          <e p="UserSignUp.cs" t="Include" />
+        </e>
+        <e p="DTOsMusic" t="Include">
+          <e p="MusicDTO.cs" t="Include" />
+          <e p="SaveMusic.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
