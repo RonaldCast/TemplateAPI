@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "tS9L8yMh6dtzp7mGjnS6n65PDVF+Qkb1zbG37Oay2bO9nPMjXbyFmHnXKk8NWWHW37pYj57slKuIi+Rk7gc3qg==",
+  "dgSpecHash": "idggsoES8W8/q/3XMkNcZoeODrUmCVshXUtzuIxhEVgbxmEET+x+uHGImZBLtV8RRpp1wxc0DdLx0zUxVUeh4Q==",
   "success": true,
   "projectFilePath": "/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/APIWithIdentity.csproj",
   "expectedPackageFiles": [
     "/Users/ronaldcastillo/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/ronaldcastillo/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.0/automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "/Users/ronaldcastillo/.nuget/packages/fluentvalidation/9.3.0/fluentvalidation.9.3.0.nupkg.sha512",
+    "/Users/ronaldcastillo/.nuget/packages/fluentvalidation.aspnetcore/9.3.0/fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "/Users/ronaldcastillo/.nuget/packages/fluentvalidation.dependencyinjectionextensions/9.3.0/fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
     "/Users/ronaldcastillo/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/ronaldcastillo/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.10/microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
     "/Users/ronaldcastillo/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.0/microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",

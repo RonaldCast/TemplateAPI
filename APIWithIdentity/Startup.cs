@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using APIWithIdentity.DomainModel;
 using APIWithIdentity.DomainModel.Models.Auth;
 using APIWithIdentity.Extensions;
@@ -11,17 +9,14 @@ using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using FluentValidation.AspNetCore;
 
 namespace APIWithIdentity
 {
@@ -36,10 +31,12 @@ namespace APIWithIdentity
 
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.Configure<JwtSettings>(Configuration.GetSection("Jwt"));
             var jwtSettings = Configuration.GetSection("Jwt").Get<JwtSettings>();
-            
-            services.AddControllers();
+
+            services.AddControllers()
+                .AddFluentValidation(fv => { fv.RegisterValidatorsFromAssemblyContaining<Startup>();});
             
             var dataAssemblyName = typeof(AppDbContext).Assembly.GetName().Name;
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dev"), 
@@ -114,14 +111,15 @@ namespace APIWithIdentity
             {
                 app.UseDeveloperExceptionPage();
             }
+            
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
             
+            app.UseCors("AllowAll");
             
             app.UseAuth();
-
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
             
             app.UseSwagger();

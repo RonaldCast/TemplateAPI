@@ -11,9 +11,7 @@ using APIWithIdentity.DTOs;
 using APIWithIdentity.DTOs.DTOsAuth;
 using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
-using APIWithIdentity.Validators;
 using AutoMapper;
-using FluentValidation.TestHelper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -50,7 +48,7 @@ namespace APIWithIdentity.Controllers
         
         [Authorize(Roles = "Admin")]
         [HttpPost("SignUp")]
-        public async Task<IActionResult> SignUp(UserSignUp userSignUp)
+        public async Task<ActionResult<ResponseMessage<string>>> SignUp(UserSignUp userSignUp)
         {
             var user = _mapper.Map<UserSignUp, User>(userSignUp);
 
@@ -58,10 +56,10 @@ namespace APIWithIdentity.Controllers
 
             if (userCreateResult.Succeeded)
             {
-                return Created(string.Empty, string.Empty);
-            }
+                return Ok(new ResponseMessage<string> { Message = "User was created"});
 
-            return Problem(userCreateResult.Errors.First().Description, null, 500);
+            }
+            return BadRequest(new ResponseMessage<string> {Message = "Error creating user"});
         }
         
         [HttpPost("SignIn")]
@@ -106,19 +104,11 @@ namespace APIWithIdentity.Controllers
         
         [Authorize(Roles = "Admin")]
         [HttpPost("role")]
-        public async Task<IActionResult> CreateRole([FromBody]  CreateRole model)
+        public async Task<ActionResult<ResponseMessage<string>>> CreateRole([FromBody]  CreateRole model)
         {
-            var validator = new RoleValidator();
-            var validResult = await validator.ValidateAsync(model);
-
-            if (!validResult.IsValid)
-            {
-                return BadRequest(validResult.Errors);
-            }
-            
             var roleExist = await _roleManager.RoleExistsAsync(model.RoleName);
 
-            if (roleExist) return BadRequest();
+            if (roleExist) return BadRequest(new ResponseMessage<string> { Message = "Role exist"});
             var newRole = new Role
             {
                 Name = model.RoleName
@@ -128,26 +118,21 @@ namespace APIWithIdentity.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(new {message = "se a creado correctamente"});
+                return Ok(new ResponseMessage<string> { Message = "Role was created"});
             }
-            return BadRequest();
+            return BadRequest(new ResponseMessage<string> { Message = "Error creating role"});
         }
         
         [Authorize(Roles = "Admin")]
         [HttpPost("roleUser")]
-        public async Task<ActionResult> AssignRoleToUser([FromBody] AssignRole model)
+        public async Task<ActionResult<ResponseMessage<string>>> AssignRoleToUser([FromBody] AssignRole model)
         {
-            var validator = new AssignRoleValidator();
-            var validResult = await validator.ValidateAsync(model);
-
-            if (!validResult.IsValid)
-                return BadRequest(validResult.Errors);
             
             var user = await _userManager.FindByIdAsync(model.UserId);
 
             if (user == null)
             {
-                return NotFound();
+                return NotFound(new ResponseMessage<string> { Message = "User not found"});
             }
             
             var currentRoles = await _userManager.GetRolesAsync(user);
@@ -156,7 +141,7 @@ namespace APIWithIdentity.Controllers
             
             if(rolesNotExist.Any())
             {
-                return this.BadRequest();
+                return BadRequest(new ResponseMessage<string> { Message = "Roles no exists"});
             }
             
             var removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles.ToArray());
@@ -165,17 +150,17 @@ namespace APIWithIdentity.Controllers
             if (!removeResult.Succeeded)
             {
                 ModelState.AddModelError("", "Failed to remove user roles");
-                return BadRequest();
+                return BadRequest(new ResponseMessage<string> { Message = "Error add roles"});
             }
             
             var result = await _userManager.AddToRolesAsync(user, model.Roles);
 
             if (result.Succeeded)
             {
-                return Ok();
+                return Ok(new ResponseMessage<string> { Message = "Assign role"});
             }
             
-            return BadRequest();
+            return BadRequest(new ResponseMessage<string> { Message = "Error add roles"});
            
         }
 
