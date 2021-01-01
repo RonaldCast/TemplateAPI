@@ -8,5 +8,7 @@ namespace APIWithIdentity.Persistence.Repository.Contracts
     {
         Task<IEnumerable<Artist>> GetAllWithMusicsAsync();
         Task<Artist> GetWithMusicsByIdAsync(int id);
+
+        Task<List<Artist>> GetArtistsByNameAsync(string name);
     }
 }

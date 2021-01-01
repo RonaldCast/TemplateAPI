@@ -13,7 +13,6 @@ using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -206,7 +205,7 @@ namespace APIWithIdentity.Controllers
             return Ok(resp);
         }
 
-        private void SetTokenCookie(string token)
+        /*private void SetTokenCookie(string token)
         {
             var cookieOptions = new CookieOptions
             {
@@ -214,7 +213,7 @@ namespace APIWithIdentity.Controllers
                 Expires = DateTime.UtcNow.AddDays(7)
             };
             Response.Cookies.Append("refreshToken", token, cookieOptions);
-        }
+        }*/
 
         [Authorize]
         [HttpPost("revoke-token")]

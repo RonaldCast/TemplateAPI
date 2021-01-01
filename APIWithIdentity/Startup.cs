@@ -35,6 +35,7 @@ namespace APIWithIdentity
             services.Configure<JwtSettings>(Configuration.GetSection("Jwt"));
             var jwtSettings = Configuration.GetSection("Jwt").Get<JwtSettings>();
 
+           
             services.AddControllers()
                 .AddFluentValidation(fv => { fv.RegisterValidatorsFromAssemblyContaining<Startup>();});
             
@@ -53,7 +54,7 @@ namespace APIWithIdentity
                 })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
-
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IMusicServices, MusicServices>();
             services.AddTransient<IArtistServices, ArtistServices>();
@@ -65,6 +66,11 @@ namespace APIWithIdentity
             {
                 op.GroupNameFormat = "'v'VVV";
                 op.SubstituteApiVersionInUrl = true;
+            });
+
+            services.AddStackExchangeRedisCache(op =>
+            {
+                op.Configuration = $"{Configuration["Redis:Port"]}:{Configuration["Redis:Host"]}";
             });
 
             services.AddSwaggerGen(options =>
@@ -120,7 +126,14 @@ namespace APIWithIdentity
             app.UseCors("AllowAll");
             
             app.UseAuth();
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+            
+            
+           
+           
             
             app.UseSwagger();
             app.UseSwaggerUI(c =>

@@ -86,3 +86,8 @@
 /Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb
 /Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/FluentValidation.AspNetCore.dll
 /Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/FluentValidation.DependencyInjectionExtensions.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.StackExchangeRedis.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/StackExchange.Redis.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll
+/Users/ronaldcastillo/Desktop/Doc/Project Code/Backend/APIWithIdentity/APIWithIdentity/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll

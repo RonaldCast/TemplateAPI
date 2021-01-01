@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 using APIWithIdentity.DomainModel.Models;
 using APIWithIdentity.DTOs;
@@ -7,6 +9,8 @@ using APIWithIdentity.Validators.ArtistValidator;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace APIWithIdentity.Controllers
 {
@@ -18,11 +22,13 @@ namespace APIWithIdentity.Controllers
     {
         private readonly IArtistServices _artistService;
         private readonly IMapper _mapper;
+        private readonly IDistributedCache _distributedCache;
         
-        public ArtistController(IArtistServices artistService, IMapper mapper)
+        public ArtistController(IArtistServices artistService, IMapper mapper, IDistributedCache distributedCache)
         {
-            this._mapper = mapper;
-            this._artistService = artistService;
+            _mapper = mapper;
+            _artistService = artistService;
+            _distributedCache = distributedCache;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ArtistDTO>>> GetAllArtists()
@@ -62,6 +68,41 @@ namespace APIWithIdentity.Controllers
 
             return Ok(artistResource);
         }
+
+       [HttpGet("searchForName")]
+       public async Task<ActionResult<ResponseMessage<List<Artist>>>> Get([FromQuery] string name)
+       {
+
+           var cacheKey = name.ToLower();
+
+           List<Artist> artists;
+           string serializeArtist;
+
+           var encodeArtist = await _distributedCache.GetAsync(cacheKey);
+
+           if (encodeArtist != null)
+           {
+               serializeArtist = Encoding.UTF8.GetString(encodeArtist);
+               artists = JsonConvert.DeserializeObject<List<Artist>>(serializeArtist);
+           }
+           else
+           {
+               
+               artists = await _artistService.GetArtistsByNameAsync(name);
+               serializeArtist = JsonConvert.SerializeObject(artists);
+               encodeArtist = Encoding.UTF8.GetBytes(serializeArtist);
+               var options = new DistributedCacheEntryOptions()
+                   .SetSlidingExpiration(TimeSpan.FromMinutes(5))
+                   .SetAbsoluteExpiration(DateTime.Now.AddHours(6));
+
+               await _distributedCache.SetAsync(cacheKey, encodeArtist, options);
+           }
+
+           return Ok(new ResponseMessage<List<Artist>> { Response = artists});
+
+
+
+       }
        
        
 

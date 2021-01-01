@@ -26,5 +26,11 @@ namespace APIWithIdentity.Persistence.Repository
                 .FirstOrDefaultAsync(a => a.Id == id);
 
         }
+
+        public async Task<List<Artist>> GetArtistsByNameAsync(string name)
+        {
+            return await Context.Artists.Where(x => x.Name.Contains(name))
+                .AsNoTracking().ToListAsync();
+        }
     }
 }
