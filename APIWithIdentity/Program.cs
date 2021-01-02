@@ -1,11 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace APIWithIdentity
 {
@@ -13,6 +10,15 @@ namespace APIWithIdentity
     {
         public static void Main(string[] args)
         {
+            IConfigurationRoot configuration = new
+                ConfigurationBuilder().AddJsonFile("appsettings.json",
+                optional: false, reloadOnChange: true).Build();
+            
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .CreateLogger();
+
+            
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -22,6 +28,6 @@ namespace APIWithIdentity
                 {
                     webBuilder.UseStartup<Startup>()
                         .UseUrls("http://localhost:5001");
-                });
+                }).UseSerilog();
     } 
 }

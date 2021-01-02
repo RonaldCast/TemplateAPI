@@ -10,6 +10,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace APIWithIdentity.Controllers
@@ -23,12 +24,17 @@ namespace APIWithIdentity.Controllers
         private readonly IArtistServices _artistService;
         private readonly IMapper _mapper;
         private readonly IDistributedCache _distributedCache;
+        private readonly ILogger<ArtistController> _logger;
         
-        public ArtistController(IArtistServices artistService, IMapper mapper, IDistributedCache distributedCache)
+        public ArtistController(IArtistServices artistService, IMapper mapper, 
+            IDistributedCache distributedCache,
+                ILogger<ArtistController> logger
+            )
         {
             _mapper = mapper;
             _artistService = artistService;
             _distributedCache = distributedCache;
+            _logger = logger;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ArtistDTO>>> GetAllArtists()
@@ -51,14 +57,8 @@ namespace APIWithIdentity.Controllers
         [HttpPost]
        // [Authorize("OnlyTest")]
         public async Task<ActionResult<ArtistDTO>> CreateArtist([FromBody] SaveArtist saveArtistResource)
-        {
-            var validator = new SaveArtistValidator();
-            var validationResult = await validator.ValidateAsync(saveArtistResource);
-
-            if (!validationResult.IsValid)
-                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
-
-            var artistToCreate = _mapper.Map<SaveArtist, Artist>(saveArtistResource);
+       {
+           var artistToCreate = _mapper.Map<SaveArtist, Artist>(saveArtistResource);
 
             var newArtist = await _artistService.CreateArtist(artistToCreate);
 
@@ -70,9 +70,9 @@ namespace APIWithIdentity.Controllers
         }
 
        [HttpGet("searchForName")]
-       public async Task<ActionResult<ResponseMessage<List<Artist>>>> Get([FromQuery] string name)
+       public async Task<ActionResult<ResponseMessage<List<Artist>>>> GetArtistByName([FromQuery] string name)
        {
-
+           
            var cacheKey = name.ToLower();
 
            List<Artist> artists;
@@ -84,6 +84,8 @@ namespace APIWithIdentity.Controllers
            {
                serializeArtist = Encoding.UTF8.GetString(encodeArtist);
                artists = JsonConvert.DeserializeObject<List<Artist>>(serializeArtist);
+               _logger.LogInformation(LogCustomeMessage.ReadMessage("APIWithIdentity", 
+                   "ArtistController", "GetArtistByName","Get data from Redis cache"));
            }
            else
            {
