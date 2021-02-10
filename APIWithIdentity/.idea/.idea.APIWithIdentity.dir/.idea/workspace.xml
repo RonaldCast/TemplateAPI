@@ -23,65 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed5eab6-4e50-478d-a3f6-7b72fbf3d22a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/LogCustomMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity.dir/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity.dir/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity.dir/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.APIWithIdentity.dir/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.APIWithIdentity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.APIWithIdentity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.APIWithIdentity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.APIWithIdentity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DTOs/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DomainModel/obj/Debug/netcoreapp3.1/APIWithIdentity.DomainModel.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.DomainModel/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.DomainModel/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Persistence/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../APIWithIdentity.Services/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIWithIdentity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/APIWithIdentity.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ArtistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ArtistController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.DTOs.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/APIWithIdentity.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/APIWithIdentity.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/APIWithIdentity.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/APIWithIdentity.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
@@ -159,13 +115,14 @@
       <option name="presentableId" value="Default" />
       <updated>1609469198235</updated>
       <workItem from="1609469204713" duration="533000" />
+      <workItem from="1612923803591" duration="307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -177,6 +134,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

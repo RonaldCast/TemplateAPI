@@ -45,7 +45,7 @@ namespace APIWithIdentity.Controllers
             _authServices = authServices;
         }
         
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost("SignUp")]
         public async Task<ActionResult<ResponseMessage<string>>> SignUp(UserSignUp userSignUp)
         {
@@ -69,7 +69,7 @@ namespace APIWithIdentity.Controllers
             var user = _userManager.Users.SingleOrDefault(u => u.UserName == userLoginResource.Email);
             if (user is null)
             {
-                return NotFound("User not found");
+                return NotFound(new ResponseMessage<ResponseLogin>{Message = "Email o contraseña son incorrectos"});
             }
 
             var userSigninResult = await _userManager.CheckPasswordAsync(user, userLoginResource.Password);
@@ -78,7 +78,7 @@ namespace APIWithIdentity.Controllers
             {
                 resp.Message = "Email o contraseña son incorrectos";
                 
-                return BadRequest(resp);
+                return Unauthorized(resp);
             }
 
           

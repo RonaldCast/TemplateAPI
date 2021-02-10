@@ -33,12 +33,12 @@ Configuration appsetting.json
 Configuration Program 
 
 ```
-
 public class Program
 {
   public static void Main(string[] args)
   {
-   
+      try
+        {
              //Configuration
                IConfigurationRoot configuration = new
                 ConfigurationBuilder().AddJsonFile("appsettings.json",
@@ -47,18 +47,8 @@ public class Program
                 Log.Logger = new LoggerConfiguration()
                     .ReadFrom.Configuration(configuration).CreateLogger();
   
-                CreateHostBuilder(args)
-                    .Build()
-                    .Run();
+    
+}
   }
-
-     public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>()
-                    .UseUrls("http://localhost:5001");
-                }).UseSerilog();
-
 }
 ```
