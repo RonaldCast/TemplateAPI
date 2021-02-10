@@ -11,5 +11,7 @@ namespace APIWithIdentity.Services
         Task<Artist> CreateArtist(Artist newArtist);
         Task UpdateArtist(Artist artistToBeUpdated, Artist artist);
         Task DeleteArtist(Artist artist);
+
+        Task<List<Artist>> GetArtistsByNameAsync(string name);
     }
 }

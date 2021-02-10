@@ -47,5 +47,11 @@ namespace APIWithIdentity.Services
 
             await _uow.CommitAsync();
         }
+
+       public async Task<List<Artist>> GetArtistsByNameAsync(string name)
+       {
+           return  await _uow.Artists.GetArtistsByNameAsync(name);
+           
+       }
     }
 }

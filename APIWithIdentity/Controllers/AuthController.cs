@@ -13,7 +13,6 @@ using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -46,8 +45,9 @@ namespace APIWithIdentity.Controllers
             _authServices = authServices;
         }
         
+        //[Authorize(Roles = "Admin")]
         [HttpPost("SignUp")]
-        public async Task<IActionResult> SignUp(UserSignUp userSignUp)
+        public async Task<ActionResult<ResponseMessage<string>>> SignUp(UserSignUp userSignUp)
         {
             var user = _mapper.Map<UserSignUp, User>(userSignUp);
 
@@ -55,10 +55,10 @@ namespace APIWithIdentity.Controllers
 
             if (userCreateResult.Succeeded)
             {
-                return Created(string.Empty, string.Empty);
-            }
+                return Ok(new ResponseMessage<string> { Message = "User was created"});
 
-            return Problem(userCreateResult.Errors.First().Description, null, 500);
+            }
+            return BadRequest(new ResponseMessage<string> {Message = "Error creating user"});
         }
         
         [HttpPost("SignIn")]
@@ -69,7 +69,7 @@ namespace APIWithIdentity.Controllers
             var user = _userManager.Users.SingleOrDefault(u => u.UserName == userLoginResource.Email);
             if (user is null)
             {
-                return NotFound("User not found");
+                return NotFound(new ResponseMessage<ResponseLogin>{Message = "Email o contraseña son incorrectos"});
             }
 
             var userSigninResult = await _userManager.CheckPasswordAsync(user, userLoginResource.Password);
@@ -78,12 +78,11 @@ namespace APIWithIdentity.Controllers
             {
                 resp.Message = "Email o contraseña son incorrectos";
                 
-                return BadRequest(resp);
+                return Unauthorized(resp);
             }
 
           
             var roles = await _userManager.GetRolesAsync(user);
-
             var token = GenerateJwt(user, roles);
             var refreshToken = GenerateRefreshToken(IpAddress());
 
@@ -102,27 +101,66 @@ namespace APIWithIdentity.Controllers
             return Ok(resp);
         }
         
-        [HttpPost("Roles")]
-        public async Task<IActionResult> CreateRole(string roleName)
+        [Authorize(Roles = "Admin")]
+        [HttpPost("role")]
+        public async Task<ActionResult<ResponseMessage<string>>> CreateRole([FromBody]  CreateRole model)
         {
-            if(string.IsNullOrWhiteSpace(roleName))
-            {
-                return BadRequest("Role name should be provided.");
-            }
+            var roleExist = await _roleManager.RoleExistsAsync(model.RoleName);
 
+            if (roleExist) return BadRequest(new ResponseMessage<string> { Message = "Role exist"});
             var newRole = new Role
             {
-                Name = roleName
+                Name = model.RoleName
             };
 
-            var roleResult = await _roleManager.CreateAsync(newRole);
+            var result = await _roleManager.CreateAsync(newRole);
 
-            if (roleResult.Succeeded)
+            if (result.Succeeded)
             {
-                return Ok();
+                return Ok(new ResponseMessage<string> { Message = "Role was created"});
             }
+            return BadRequest(new ResponseMessage<string> { Message = "Error creating role"});
+        }
+        
+        [Authorize(Roles = "Admin")]
+        [HttpPost("roleUser")]
+        public async Task<ActionResult<ResponseMessage<string>>> AssignRoleToUser([FromBody] AssignRole model)
+        {
+            
+            var user = await _userManager.FindByIdAsync(model.UserId);
 
-            return Problem(roleResult.Errors.First().Description, null, 500);
+            if (user == null)
+            {
+                return NotFound(new ResponseMessage<string> { Message = "User not found"});
+            }
+            
+            var currentRoles = await _userManager.GetRolesAsync(user);
+
+            var rolesNotExist = model.Roles.Except(_roleManager.Roles.Select(x => x.Name)).ToArray();
+            
+            if(rolesNotExist.Any())
+            {
+                return BadRequest(new ResponseMessage<string> { Message = "Roles no exists"});
+            }
+            
+            var removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles.ToArray());
+
+
+            if (!removeResult.Succeeded)
+            {
+                ModelState.AddModelError("", "Failed to remove user roles");
+                return BadRequest(new ResponseMessage<string> { Message = "Error add roles"});
+            }
+            
+            var result = await _userManager.AddToRolesAsync(user, model.Roles);
+
+            if (result.Succeeded)
+            {
+                return Ok(new ResponseMessage<string> { Message = "Assign role"});
+            }
+            
+            return BadRequest(new ResponseMessage<string> { Message = "Error add roles"});
+           
         }
 
         
@@ -167,7 +205,7 @@ namespace APIWithIdentity.Controllers
             return Ok(resp);
         }
 
-        private void SetTokenCookie(string token)
+        /*private void SetTokenCookie(string token)
         {
             var cookieOptions = new CookieOptions
             {
@@ -175,14 +213,12 @@ namespace APIWithIdentity.Controllers
                 Expires = DateTime.UtcNow.AddDays(7)
             };
             Response.Cookies.Append("refreshToken", token, cookieOptions);
-        }
+        }*/
 
         [Authorize]
         [HttpPost("revoke-token")]
-        
         private string GenerateJwt(User user, IList<string> roles)
         {
-
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
@@ -190,6 +226,12 @@ namespace APIWithIdentity.Controllers
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
+
+            if (roles.Count > 0)
+            {
+                claims.AddRange(roles
+                    .Select(rol => new Claim(ClaimTypes.Role, rol)));
+            }
 
             var roleClaims = roles.Select(r => new Claim(ClaimTypes.Role, r));
             claims.AddRange(roleClaims);
@@ -226,7 +268,7 @@ namespace APIWithIdentity.Controllers
                 return new RefreshToken
                 {
                     Token = Convert.ToBase64String(randomBytes),
-                    Expires = DateTime.UtcNow.AddDays(7),
+                    Expires = DateTime.UtcNow.AddDays(365),
                     Created = DateTime.UtcNow,
                     CreatedByIp = ipAddress
                 };

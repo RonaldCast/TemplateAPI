@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using APIWithIdentity.DomainModel;
 using APIWithIdentity.DomainModel.Models.Auth;
 using APIWithIdentity.Extensions;
@@ -11,17 +9,14 @@ using APIWithIdentity.Services;
 using APIWithIdentity.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using FluentValidation.AspNetCore;
 
 namespace APIWithIdentity
 {
@@ -34,13 +29,15 @@ namespace APIWithIdentity
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.Configure<JwtSettings>(Configuration.GetSection("Jwt"));
             var jwtSettings = Configuration.GetSection("Jwt").Get<JwtSettings>();
-            
-            services.AddControllers();
+
+           
+            services.AddControllers()
+                .AddFluentValidation(fv => { fv.RegisterValidatorsFromAssemblyContaining<Startup>();});
             
             var dataAssemblyName = typeof(AppDbContext).Assembly.GetName().Name;
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dev"), 
@@ -48,15 +45,16 @@ namespace APIWithIdentity
             
             services.AddIdentity<User, Role>(options =>
                 {
-                    options.Password.RequiredLength = 8;
-                    options.Password.RequireNonAlphanumeric = true;
-                    options.Password.RequireUppercase = true;
+                    options.Password.RequiredLength = 5;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireLowercase = false;
                     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1d);
-                    options.Lockout.MaxFailedAccessAttempts = 5;
+                    options.Lockout.MaxFailedAccessAttempts = 20;
                 })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
-
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IMusicServices, MusicServices>();
             services.AddTransient<IArtistServices, ArtistServices>();
@@ -68,6 +66,11 @@ namespace APIWithIdentity
             {
                 op.GroupNameFormat = "'v'VVV";
                 op.SubstituteApiVersionInUrl = true;
+            });
+
+            services.AddStackExchangeRedisCache(op =>
+            {
+                op.Configuration = $"{Configuration["Redis:Port"]}:{Configuration["Redis:Host"]}";
             });
 
             services.AddSwaggerGen(options =>
@@ -114,15 +117,23 @@ namespace APIWithIdentity
             {
                 app.UseDeveloperExceptionPage();
             }
+            
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
             
+            app.UseCors("AllowAll");
             
             app.UseAuth();
-
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+            
+            
+           
+           
             
             app.UseSwagger();
             app.UseSwaggerUI(c =>
